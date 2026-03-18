@@ -1,4 +1,4 @@
-# **STATISTICS ANALYSER**
+# **STATISTICS ANALYZER**
 
 **Statistics Analyzer** is a tool built to perform statistics calculation on datasets provided by users. Either by reading csv files, or by manual input. It can read single-column csv files, as well as multi-column, with the option to choose which columns to analyse, or simply using the *all keyword to analyze all columns.
 This program was built using Python 3.14, it uses a class to handle all the data related work, as well as multiple function for the mathematic calculations.
@@ -45,7 +45,7 @@ This program will calculate all the following data:
 Use git to install the repository on your computer:
 
 ```bash
-git clone https://github.com/GFou-dev/stats-analyser
+git clone https://github.com/GFou-dev/stats-analyzer
 ```
 
 ## How to use:
@@ -60,13 +60,13 @@ There are two ways to use this program:
 
 - The first command-line argument should be the csv filepath the users want to analyse.
 
-``python analyser.py grades.csv``
+``python analyzer.py grades.csv``
 
 - Then the users can input any number of column headers they want analysed. If they want to input all columns, they can use the command  `*all` instead.
 
-``python analyser.py grades.csv Class_A Class_B``
+``python analyzer.py grades.csv Class_A Class_B``
 
-``python analyser.py grades.csv *all``
+``python analyzer.py grades.csv *all``
 
 - If only the csv is provided, the program will simply combine all numerical data contained within it, and add to a single list to analyse.
 
@@ -84,7 +84,7 @@ There are two ways to use this program:
 The test suite covers all the mathematical calculations.
 
 ```bash
-pytest test_analyser.py -v
+pytest test_analyzer.py -v
 ```
 
 ---
@@ -92,9 +92,9 @@ pytest test_analyser.py -v
 ## Project Structure
 
 ```
-analyser/
-├── analyser.py       # Main program
-├── test_analyser.py  # Pytest test suite
+analyzer/
+├── analyzer.py       # Main program
+├── test_analyzer.py  # Pytest test suite
 ├── grades.csv        # A sample csv file with student grades
 ├── requirements.txt  #The required libraries to run this program
 └── README.md
