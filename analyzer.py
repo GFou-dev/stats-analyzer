@@ -110,7 +110,7 @@ def mean(a_list, rnd=4):
 
 
 def median(a_list):
-    "Calculates the middle number in the list, or 50th percentile."""
+    """Calculates the middle number in the list, or 50th percentile."""
     s_list = sorted(a_list)
     if len(s_list) % 2 == 1:
         return s_list[len(s_list) // 2]
@@ -141,8 +141,11 @@ def remove_outliers(a_list):
     """Remove outliers in the dataset, that are farther away than 1.5 interquartile ranges from either Q1 or Q3."""
     s_list = sorted(a_list)
     cleaned_list = []
+    q1 = left_quarter(a_list)
+    q3 = right_quarter(a_list)
+    iqr = interquartile_range(a_list)
     for n in s_list:
-        if left_quarter(a_list) - interquartile_range(a_list) * 1.5 < n < right_quarter(a_list) + interquartile_range(a_list) * 1.5:
+        if q1 - iqr * 1.5 < n < q3 + iqr * 1.5:
             cleaned_list.append(n)
     return cleaned_list
 
