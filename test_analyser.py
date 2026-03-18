@@ -1,4 +1,4 @@
-from project import mean, median, left_quarter, right_quarter, remove_outliers, interquartile_range, mode, variance, standard_deviation, z_score, mean_absolute_deviation
+from analyser import mean, median, left_quarter, right_quarter, remove_outliers, interquartile_range, mode, variance, standard_deviation, z_score, mean_absolute_deviation
 import pytest
 
 
